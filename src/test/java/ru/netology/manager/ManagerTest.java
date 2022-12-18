@@ -23,7 +23,7 @@ public class ManagerTest {
         manager.add(smartphone3);
 
         Product[] actual = repo.findAll();
-        Product[] expected = {book1,book2,book3,smartphone1,smartphone2,smartphone3};
+        Product[] expected = {book1, book2, book3, smartphone1, smartphone2, smartphone3};
 
         Assertions.assertArrayEquals(expected, actual);
     }
@@ -44,6 +44,7 @@ public class ManagerTest {
 
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
     public void SearchProductsSmartphone() {
         Smartphone smartphone1 = new Smartphone(10, "iPhone14", 150000, "Apple");
@@ -82,7 +83,7 @@ public class ManagerTest {
         Book book1 = new Book(12, "About dogs", "Gerasimova", 200);
         Smartphone smartphone1 = new Smartphone(6, "LG", 15000, "LgCorporation");
         Book book3 = new Book(6, "My world", "Corovina", 1800);
-       ProductRepository repo = new ProductRepository();
+        ProductRepository repo = new ProductRepository();
         ProductManager manager = new ProductManager(repo);
         manager.add(book1);
         manager.add(smartphone1);
@@ -94,5 +95,20 @@ public class ManagerTest {
         Assertions.assertArrayEquals(expected, actual);
     }
 
+    @Test
+    public void SearchProductsWithEmptyManager() {
+        Smartphone smartphone1 = new Smartphone(10, "iPhone14", 150000, "Apple");
+        Smartphone smartphone2 = new Smartphone(3, "SamsungA10", 40000, "LLC Samsung");
+        Smartphone smartphone3 = new Smartphone(3, "XiaomiRedmi10", 35000, "Xiaomi");
+        ProductRepository repo = new ProductRepository();
+        ProductManager manager = new ProductManager(repo);
 
+
+        Product[] actual = manager.searchBy("Apple");
+        Smartphone[] expected = {};
+
+        Assertions.assertArrayEquals(expected, actual);
+
+
+    }
 }

@@ -2,7 +2,7 @@ package ru.netology.manager;
 
 public class ProductManager {
 
-    private ProductRepository repo;
+    ProductRepository repo;
 
     public ProductManager(ProductRepository repo) {
         this.repo = repo;
@@ -10,6 +10,10 @@ public class ProductManager {
 
     public void add(Product product) {
         repo.add(product);
+    }
+
+    public Product[] findAll() {
+        return repo.findAll();
     }
 
     public Product[] searchBy(String text) {

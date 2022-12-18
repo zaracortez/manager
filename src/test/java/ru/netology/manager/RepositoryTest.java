@@ -35,11 +35,22 @@ public class RepositoryTest {
     }
 
     @Test
-    public void saveProducts() {
-        repo.save(book2);
+    public void shouldSaveProducts() {
+        repo.save(book1);
         repo.save(smartphone1);
         repo.save(book3);
-        Product[] expected = {book2, smartphone1, book3};
+        Product[] expected = {book1, smartphone1, book3};
+        Product[] actual = repo.getProducts();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void shouldRemovePrice() {
+        repo.add(book3);
+        repo.add(smartphone3);
+        repo.add(book2);
+        repo.removePrice(650);
+        Product[] expected = {smartphone3, book2};
         Product[] actual = repo.getProducts();
         Assertions.assertArrayEquals(expected, actual);
     }
