@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="e67a103c-502f-420e-aaaf-74c95604b2fc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/manager/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/manager/Book.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/manager/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/manager/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/manager/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/manager/ProductManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/manager/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/manager/ProductRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/manager/Smartphone.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/manager/Smartphone.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/manager/ManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/manager/ManagerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/manager/RepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/manager/RepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -134,9 +131,9 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.RepositoryTest" />
+        <item itemvalue="JUnit.ManagerTest" />
         <item itemvalue="JUnit.RepositoryTest.shouldRemoveId" />
         <item itemvalue="JUnit.ManagerTest.SearchProductsWithEmptyManager" />
-        <item itemvalue="JUnit.ManagerTest" />
         <item itemvalue="JUnit.ManagerTest.SearchVariousProducts" />
       </list>
     </recent_temporary>

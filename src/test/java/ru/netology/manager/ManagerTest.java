@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class ManagerTest {
     @Test
-    public void AddAllProducts() {
+   public void AddAllProducts() {
         ProductRepository repo = new ProductRepository();
         ProductManager manager = new ProductManager(repo);
         Book book1 = new Book(5, "My life", "Edward Luk", 500);

@@ -10,7 +10,8 @@ public class ProductRepository {
         for (int i = 0; i < products.length; i++) {
             tmp[i] = products[i];
         }
-        tmp[products.length] = product;
+        //tmp[products.length] = product;//мой вариант
+        tmp[tmp.length-1]=product;
         products = tmp;
 
     }
@@ -58,6 +59,14 @@ public class ProductRepository {
     public Product[] findAll() {
 
         return products;
+    }
+    public Product findById(int id){
+        for (Product product:products){
+            if (product.getId()==id){
+                return product;
+            }
+        }
+        return null;
     }
 }
 

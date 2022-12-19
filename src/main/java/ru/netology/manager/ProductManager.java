@@ -13,12 +13,14 @@ public class ProductManager {
     }
 
     public Product[] findAll() {
-        return repo.findAll();
+        //return repo.findAll(); мой вариант
+        return repo.getProducts();
     }
 
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
-        for (Product product : repo.findAll()) {
+        //for (Product product : repo.findAll()) {мой вариант
+        for (Product product : repo.getProducts()) {
             if (matches(product, text)) {
                 Product[] tmp = new Product[result.length + 1];
                 for (int i = 0; i < result.length; i++) {
