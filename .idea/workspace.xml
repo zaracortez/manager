@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e67a103c-502f-420e-aaaf-74c95604b2fc" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/manager/ProductManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/manager/ProductManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/manager/ProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/manager/ProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/netology/manager/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/netology/manager/Product.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/manager/ManagerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/manager/ManagerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/manager/RepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/manager/RepositoryTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,22 +64,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ManagerTest.SearchProductsWithEmptyManager" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="manager" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ru.netology.manager.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ru.netology.manager" />
-      <option name="MAIN_CLASS_NAME" value="ru.netology.manager.ManagerTest" />
-      <option name="METHOD_NAME" value="SearchProductsWithEmptyManager" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ManagerTest.SearchVariousProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="manager" />
       <extension name="coverage">
@@ -92,6 +75,22 @@
       <option name="PACKAGE_NAME" value="ru.netology.manager" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.manager.ManagerTest" />
       <option name="METHOD_NAME" value="SearchVariousProducts" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManagerTest.ShouldSearchVariousProducts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="manager" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ru.netology.manager.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ru.netology.manager" />
+      <option name="MAIN_CLASS_NAME" value="ru.netology.manager.ManagerTest" />
+      <option name="METHOD_NAME" value="ShouldSearchVariousProducts" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RepositoryTest.shouldRemoveId" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="RepositoryTest.shouldFindById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="manager" />
       <extension name="coverage">
         <pattern>
@@ -122,7 +121,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ru.netology.manager" />
       <option name="MAIN_CLASS_NAME" value="ru.netology.manager.RepositoryTest" />
-      <option name="METHOD_NAME" value="shouldRemoveId" />
+      <option name="METHOD_NAME" value="shouldFindById" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -132,8 +131,8 @@
       <list>
         <item itemvalue="JUnit.RepositoryTest" />
         <item itemvalue="JUnit.ManagerTest" />
-        <item itemvalue="JUnit.RepositoryTest.shouldRemoveId" />
-        <item itemvalue="JUnit.ManagerTest.SearchProductsWithEmptyManager" />
+        <item itemvalue="JUnit.RepositoryTest.shouldFindById" />
+        <item itemvalue="JUnit.ManagerTest.ShouldSearchVariousProducts" />
         <item itemvalue="JUnit.ManagerTest.SearchVariousProducts" />
       </list>
     </recent_temporary>
@@ -159,5 +158,12 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="JUnit">
+        <watch expression="repo" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>

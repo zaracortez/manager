@@ -9,9 +9,9 @@ public class RepositoryTest {
     Book book1 = new Book(10, "About dogs", "Gerasimova", 1500);
     Book book2 = new Book(3, "My world", "Corovina", 800);
     Book book3 = new Book(7, "Owl", "Nekrasov", 650);
-    Smartphone smartphone1 = new Smartphone(10, "iPhone14", 150000, "Apple");
-    Smartphone smartphone2 = new Smartphone(3, "SamsungA10", 40000, "LLC Samsung");
-    Smartphone smartphone3 = new Smartphone(3, "XiaomiRedmi10", 35000, "Xiaomi");
+    Smartphone smartphone1 = new Smartphone(12, "iPhone14", 150000, "Apple");
+    Smartphone smartphone2 = new Smartphone(8, "SamsungA10", 40000, "LLC Samsung");
+    Smartphone smartphone3 = new Smartphone(5, "XiaomiRedmi10", 35000, "Xiaomi");
 
     @Test
     public void shouldAddedProducts() {
@@ -54,4 +54,5 @@ public class RepositoryTest {
         Product[] actual = repo.getProducts();
         Assertions.assertArrayEquals(expected, actual);
     }
+
 }

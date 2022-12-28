@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 public class ManagerTest {
     @Test
-   public void AddAllProducts() {
+    public void AddAllProducts() {
         ProductRepository repo = new ProductRepository();
         ProductManager manager = new ProductManager(repo);
         Book book1 = new Book(5, "My life", "Edward Luk", 500);
@@ -111,4 +111,67 @@ public class ManagerTest {
 
 
     }
+
+    @Test
+    public void ShouldSearchVariousProducts() {
+        ProductRepository repo = new ProductRepository();
+        ProductManager manager = new ProductManager(repo);
+        Book book1 = new Book(10, "About dogs", "Gerasimova", 1500);
+        Book book2 = new Book(3, "My dog", "Corovina", 800);
+        Book book3 = new Book(7, "Owl", "Nekrasov", 650);
+        manager.add(book1);
+        manager.add(book2);
+        manager.add(book3);
+        Product[] actual = manager.searchBy("dog");
+        Product[] expected = {book1, book2};
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void SearchOnlyOneProduct() {
+        Smartphone smartphone1 = new Smartphone(10, "iPhone14", 150000, "Apple");
+        Smartphone smartphone2 = new Smartphone(3, "SamsungA10", 40000, "LLC Samsung");
+        Smartphone smartphone3 = new Smartphone(3, "XiaomiRedmi10", 35000, "Xiaomi");
+        Book book1 = new Book(10, "About dogs", "Gerasimova", 1500);
+        Book book2 = new Book(3, "My world", "Corovina", 800);
+        Book book3 = new Book(7, "Owl", "Nekrasov", 650);
+        ProductRepository repo = new ProductRepository();
+        ProductManager manager = new ProductManager(repo);
+        manager.add(smartphone1);
+        manager.add(smartphone2);
+        manager.add(smartphone3);
+        manager.add(book1);
+        manager.add(book2);
+        manager.add(book3);
+
+        Product[] actual = manager.searchBy("Samsung");
+        Smartphone[] expected = {smartphone2};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+    @Test
+    public void SearchProductsNotMatchNoOne() {
+        Book book1 = new Book(10, "About dogs", "Gerasimova", 1500);
+        Book book2 = new Book(3, "My world", "Corovina", 800);
+        Book book3 = new Book(7, "Owl", "Nekrasov", 650);
+        Smartphone smartphone1 = new Smartphone(10, "iPhone14", 150000, "Apple");
+        Smartphone smartphone2 = new Smartphone(3, "SamsungA10", 40000, "LLC Samsung");
+        Smartphone smartphone3 = new Smartphone(3, "XiaomiRedmi10", 35000, "Xiaomi");
+        ProductRepository repo = new ProductRepository();
+        ProductManager manager = new ProductManager(repo);
+        manager.add(book1);
+        manager.add(book2);
+        manager.add(book3);
+        manager.add(smartphone1);
+        manager.add(smartphone2);
+        manager.add(smartphone3);
+
+
+        Product[] actual = manager.searchBy("red");
+        ProductRepository[] expected = {};
+
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
 }
